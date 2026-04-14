@@ -77,6 +77,23 @@
             margin-right: 10px;
             font-weight: bold;
         }
+        /* Описание анимации появления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Смещение вниз на 30 пикселей */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Применяем анимацию к контейнеру */
+.container {
+    animation: fadeInUp 1s ease-out; /* Длится 1 секунду */
+}
+
     </style>
 </head>
 <body>
