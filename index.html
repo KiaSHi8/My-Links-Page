@@ -2,36 +2,80 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>KiaSHi8 | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiaSHi8 | Developer Portfolio</title>
     <style>
-        body { background: #0d1117; color: white; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding-top: 50px; }
-        .container { max-width: 400px; margin: auto; }
-        h1 { color: #239120; }
+        /* Основной фон с градиентом в стиле Kali Linux / Matrix */
+        body { 
+            background: radial-gradient(circle, #1a1a1a 0%, #0d1117 100%); 
+            color: #c9d1d9; 
+            text-align: center; 
+            font-family: 'Segoe UI', sans-serif; 
+            margin: 0;
+            padding: 50px 20px;
+        }
+
+        .container { max-width: 500px; margin: auto; }
+
+        /* Аватарка (заглушка) */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #239120;
+            margin-bottom: 20px;
+        }
+
+        h1 { color: #3fb950; font-size: 2.5em; margin-bottom: 5px; }
+        .subtitle { color: #8b949e; margin-bottom: 30px; font-style: italic; }
+
+        /* Стиль кнопок */
         .btn { 
-            display: block; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%; 
             margin: 15px 0; 
             padding: 15px; 
             background: #21262d; 
-            color: #c9d1d9; 
+            color: white; 
             text-decoration: none; 
-            border-radius: 6px; 
+            border-radius: 12px; 
             border: 1px solid #30363d;
-            transition: 0.3s;
+            font-weight: 600;
+            transition: all 0.3s ease; /* Плавная анимация */
         }
-        .btn:hover { background: #239120; color: white; border-color: #3fb950; }
+
+        /* Эффект при наведении */
+        .btn:hover { 
+            transform: translateY(-5px); /* Кнопка приподнимается */
+            background: #239120; 
+            box-shadow: 0 10px 20px rgba(35, 145, 32, 0.3);
+            border-color: #3fb950;
+        }
+
+        .skills { margin-top: 40px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .skill-badge { background: #30363d; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; border: 1px solid #444; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>KiaSHi8</h1>
-        <p>Junior Developer: C#, Python, HTML</p>
+        <!-- Если у тебя есть фото, можно вставить ссылку в src -->
+        <img src="https://github.com" alt="KiaSHi8" class="profile-img">
         
-        <!-- Ссылки на твои реальные проекты -->
-        <a class="btn" href="https://github.com" target="_blank">🎖️ Military Rank Trainer</a>
-        <a class="btn" href="https://github.com" target="_blank">🔍 Network Scanner</a>
-        <a class="btn" href="https://t.me" target="_blank">📱 My Telegram</a>
+        <h1>KiaSHi8</h1>
+        <p class="subtitle">Junior Developer | C# | Python | Kali Linux</p>
+        
+        <div class="skills">
+            <span class="skill-badge">C#</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">HTML/CSS</span>
+            <span class="skill-badge">Docker</span>
+        </div>
+
+        <a class="btn" href="https://github.com" target="_blank">🎖️ Military Rank Trainer (C#)</a>
+        <a class="btn" href="https://github.com" target="_blank">🔍 Network Scanner (Python)</a>
+        <a class="btn" href="https://t.me" target="_blank">💬 Contact via Telegram</a>
     </div>
 </body>
 </html>
-
