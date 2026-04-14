@@ -93,12 +93,14 @@
             backdrop-filter: blur(5px);
         }
 
-        .btn:hover {
+                .btn:hover {
             border-color: var(--accent);
-            transform: translateY(-3px);
-            background: rgba(157, 78, 221, 0.15);
-            box-shadow: 0 0 25px rgba(157, 78, 221, 0.4);
+            transform: translateY(-5px) scale(1.05); /* Увеличение на 5% и подъем */
+            background: rgba(157, 78, 221, 0.2); /* Чуть ярче фон при наведении */
+            box-shadow: 0 0 25px rgba(157, 78, 221, 0.6); /* Фиолетовое свечение */
+            color: white; /* Делаем текст белым при наведении */
         }
+
     </style>
 </head>
 <body>
