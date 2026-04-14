@@ -142,8 +142,8 @@
             opacity: Math.random() * 0.3 + 0.1
         }));
 
-        function draw() {
-            ctx.fillStyle = "rgba(10, 10, 10, 0.1)"; // Полупрозрачный фон для эффекта хвоста
+               function draw() {
+            ctx.fillStyle = "rgba(10, 10, 10, 0.1)"; 
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             for (let i = 0; i < drops.length; i++) {
@@ -151,14 +151,14 @@
                 const layer = layers[i];
                 
                 ctx.font = layer.size + "px monospace";
-                ctx.fillStyle = `rgba(157, 78, 221, 0.8)`; // Фиолетовый с разной прозрачностью
+                ctx.fillStyle = "rgba(157, 78, 221, 0.8)"; // Яркий фиолетовый
                 
                 ctx.fillText(text, i * fontSize, drops[i]);
 
                 if (drops[i] > canvas.height && Math.random() > 0.975) {
                     drops[i] = 0;
                 }
-                drops[i] += fontSize * (layer.speed * 0.5);
+                drops[i] += fontSize * (layer.speed * 0.4);
             }
         }
 
@@ -171,4 +171,5 @@
     </script>
 </body>
 </html>
+
 
